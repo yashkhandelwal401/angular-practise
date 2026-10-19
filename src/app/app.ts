@@ -1,4 +1,4 @@
-import { Component, computed, Signal, signal, WritableSignal} from '@angular/core';
+import { Component, computed , signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,12 +9,16 @@ import { RouterOutlet } from '@angular/router';
 })
 
 export class App {
-  // data = signal<number | string > (10)
-  data:WritableSignal<number> = signal(10)
-  count : Signal <number> = computed(()=>20)
+  x = signal(20);
+  y = signal(30);
+  z = computed(()=> this.x() + this.y())
 
-  updateValue(){
-    // this.data.set(true)
-    this.data.update(val=> val+1)
-  }
+updateValue(){
+    console.log(this.z());
+    this.x.set(100);
+    console.log(this.z());
+}
+updateXValue(){
+  this.x.set(1000);
+}
 }
