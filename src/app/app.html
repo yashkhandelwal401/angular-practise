@@ -1,22 +1,5 @@
 <h1> Event in Angular</h1>
-<button class="btn" name = "login " (click)="handleEvent($event)"> Click on Button</button>
-
-<br><br>
-<div
-(mouseenter)="handleEvent($event)"
-style="background-color: green; height: 100px; width: 100px;">
-
-</div>
-
-<br><br>
-<div
-(mouseleave)="handleEvent($event)"
-style="background-color: red; height: 100px; width: 100px;">
-
-</div>
-
-<br><br>
-<input
-(focus) = "handleEvent($event)"
-(input) = "handleEvent($event)"
-type ="text" name="user">
+<!-- <h1> {{data}} </h1> -->
+<button (click)="updateValue('dec')"> Decrement </button>
+<h2> {{count()}}</h2>
+<button (click)="updateValue('inc')"> Increment </button>
