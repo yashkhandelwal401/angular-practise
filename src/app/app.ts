@@ -1,4 +1,4 @@
-import { Component, computed , signal } from '@angular/core';
+import { Component , effect , signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,16 +9,21 @@ import { RouterOutlet } from '@angular/router';
 })
 
 export class App {
-  x = signal(20);
-  y = signal(30);
-  z = computed(()=> this.x() + this.y())
+  userName=signal ('anil');
+  count=signal(0);
+  displayHeading=false;
 
-updateValue(){
-    console.log(this.z());
-    this.x.set(100);
-    console.log(this.z());
-}
-updateXValue(){
-  this.x.set(1000);
-}
+  constructor(){
+    effect(()=>{
+      if(this.count()==2){
+
+        this.displayHeading=true 
+        setTimeout(()=>{
+  this.displayHeading=false;
+        },2000)
+      }else{
+        this.displayHeading=false
+      }
+    }); 
+  }  
 }

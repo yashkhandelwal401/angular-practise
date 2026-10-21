@@ -1,7 +1,10 @@
-<h1> Event in Angular</h1>
+<h1> Event in Angular </h1>
 
-<h1> {{ z() }} </h1>
+<h1> {{count() }} </h1>
 
-<button (click) = "updateValue()"> Update Value </button>
+<button (click)="count.set(count()+1)">Update userName</button>
 
-<button (click) = "updateXValue()"> Update X Value </button>
+@if(displayHeading) {
+    <h1 style="background-color: green;"> MAIN hEADING</h1>
+
+}
