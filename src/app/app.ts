@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,18 @@ import {FormsModule} from '@angular/forms';
 })
 
 export class App {
-  name = "Yash "
-  // changeName(event:Event){
-  //    const val= (event.target as HTMLInputElement).value;
-  //    this.name=val;
-  // }
+  task = " ";
+  taskList: { id: number, name: string }[] = []
+
+  addTask() {
+    this.taskList.push({ id: this.taskList.length + 1, name: this.task })
+    
+    console.log(this.taskList);
+
+  }
+
+  deleteTask(id: number) {
+  this.taskList = this.taskList.filter(item => item.id !== id);
+}
 }
 

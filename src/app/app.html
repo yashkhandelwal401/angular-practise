@@ -1,6 +1,13 @@
 <h1> Two way binding </h1>
-<input type="text" [(ngModel)]="name" placeholder ="enter">
 
-<h1> {{name}} </h1>
-<!-- <input type="text" placeholder="enter name" (input) = "changeName($event)"
-<h1> {{name}} </h1> -->
+<input [(ngModel)] = "task" type= "text" placeholder="enter task name">
+<button (click)="addTask()"> Add Task </button>
+
+@for(task of taskList; track task.id){
+  <ul class = "task-list">
+    <li> {{task.id}} </li>
+    <li> {{task.name}} </li>
+    <li> <button (click)="deleteTask(task.id)"> Delete </button> </li>
+  </ul>
+}
+
