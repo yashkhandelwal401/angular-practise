@@ -1,29 +1,14 @@
-import { Component , effect , signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  imports: [],
   templateUrl: './app.html',
+  styleUrl: './app.css',
 })
 
 export class App {
-  userName=signal ('anil');
-  count=signal(0);
-  displayHeading=false;
-
-  constructor(){
-    effect(()=>{
-      if(this.count()==2){
-
-        this.displayHeading=true 
-        setTimeout(()=>{
-  this.displayHeading=false;
-        },2000)
-      }else{
-        this.displayHeading=false
-      }
-    }); 
-  }  
+  users=['Anil','Sam','peter','Bruce','Tom','Donald','Alfred','thomson']
+  // users=[]
 }
+
