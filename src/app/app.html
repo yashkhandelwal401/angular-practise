@@ -1,16 +1,13 @@
 <h1> *ngSwitch Directives in Angular </h1>
-
- <button (click)="changeColor('red')"> Red Color </button>
- <button (click)="changeColor('green')"> Red Color </button>
- <button (click)="changeColor('blue')"> Red Color </button>
- <button (click)="changeColor('pink')"> Red Color </button>
- <button (click)="changeColor('yellow')"> Red Color </button>
-<div [ngSwitch]="color">
- <h1 *ngSwitchCase="'red'" style="background-color: red;"> Red Color </h1>
- <h1 *ngSwitchCase="'green'" style="background-color: green;"> green color </h1>
- <h1 *ngSwitchCase="'blue'" style="background-color: blue;"> Blue Color </h1>
- <h1 *ngSwitchCase="'pink'" style="background-color: pink;"> Pink Colour </h1>
- <h1 *ngSwitchCase="'yellow'" style="background-color: yellow;"> Red Colour</h1>
- <h1 *ngSwitchDefault> No Color Matched </h1>
-
-</div>
+<ul>
+    <li>
+        <a routerLink="login" > Login </a>
+    </li>
+    <li>
+        <a routerLink="about" > About </a>
+    </li>
+    <li>
+        <a routerLink="contact" > Contact </a>
+    </li>
+</ul>
+<router-outlet /> 
