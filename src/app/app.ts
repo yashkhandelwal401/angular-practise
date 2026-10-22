@@ -1,21 +1,13 @@
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [NgIf],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 
 export class App {
-color = "green";
-fontSizeNormal="30px"
-fontSizeBig="60px"
-size=30
-
-zoom=false;
-zoomToggle(){
-  this.zoom=!this.zoom;
+  show=true                          
 }
-}
- 

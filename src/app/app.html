@@ -1,6 +1,1 @@
-<!-- <h1 style="background-color: blue;"> Dynamic Style </h1> -->
-<h1 [style.color]="color" [style.fontSize]="fontSizeNormal"> Heading Tag </h1>
-
-<h1 [style.fontSize]="zoom ? fontSizeBig : fontSizeNormal"> Heading Tag 2 </h1>
-<button (click) = "zoomToggle()"> Zoom Toggle</button>
-<h1 [style.fontSize.px="size"]> Heading tag 3</h1>
+<h1 *ngIf="show"> Heading Style </h1>
