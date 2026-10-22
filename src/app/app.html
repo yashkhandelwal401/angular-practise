@@ -1,1 +1,15 @@
-<h1 *ngIf="show"> Heading Style </h1>
+<h1> ngFor Directives in Angular </h1>
+
+<ul>
+    <li *ngFor="let x of students">
+        {{x}}
+    </li>
+</ul>
+
+<hr>
+
+<ul>
+    <li *ngFor="let student of studentData">
+        {{student.name}},{{student.age}}
+    </li>
+</ul>
