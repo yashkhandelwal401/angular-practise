@@ -5,6 +5,7 @@ import { Contact } from './contact/contact';
 import { Home } from './home/home';
 import { PageNotFound } from './page-not-found/page-not-found';
 import { User } from './user/user';
+import { Profile } from './profile/profile';
 
 export const routes: Routes = [
   { path: 'login', component: Login },
@@ -12,5 +13,7 @@ export const routes: Routes = [
   { path: 'contact', component: Contact },
   { path: 'home', component: Home },
   { path: 'user/:id/:name',component:User},
+  { path: 'profile',component:Profile,data:{name:'Yash Khandelwal'}},
   { path: '**',component:PageNotFound}
 ];
+
