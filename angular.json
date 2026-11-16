@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular-practise": {
+    "AngularLearning": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-practise:build:production"
+              "buildTarget": "AngularLearning:build:production"
             },
             "development": {
-              "buildTarget": "angular-practise:build:development"
+              "buildTarget": "AngularLearning:build:development"
             }
           },
           "defaultConfiguration": "development"

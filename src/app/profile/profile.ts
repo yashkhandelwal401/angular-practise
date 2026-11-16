@@ -15,7 +15,7 @@ export class Profile {
   ngOnInit() {
     this.route.data.subscribe((params) => {
       console.log(params);
-
+        
       this.userName = params['name'];
     });
   }
