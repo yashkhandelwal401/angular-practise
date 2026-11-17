@@ -1,28 +1,28 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl , FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  imports: [RouterOutlet, ReactiveFormsModule],
+  imports: [ReactiveFormsModule],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
+
 export class App {
-  protected readonly title = signal('AngularLearning');
-  name = new FormControl('anil');
-  password = new FormControl('123');
-  email = new FormControl();
+  profileForm= new FormGroup({
+    name:new FormControl('anil'),
+    password:new FormControl('1234'),
+    email:new FormControl('Yash@gmail.com')
+  });
 
-  getValue(){
-    console.log(this.name.value);
-    console.log(this.password.value);
-    console.log(this.email.value);
+  submitData(){
+    console.log(this.profileForm.value);
   }
-
-  setValue(){
-    this.name.setValue("peter")
-    this.password.setValue("1234")
-    this.email.setValue("preter@test.com")
+  setValues(){
+    this.profileForm.setValue({
+      name:'peter',
+      password:"321@123",
+      email:"peter"
+    });
   }
 }
