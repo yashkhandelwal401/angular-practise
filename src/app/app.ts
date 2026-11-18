@@ -1,28 +1,19 @@
-import { Component, signal } from '@angular/core';
-import { FormControl , FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [ReactiveFormsModule],
+  imports: [RouterOutlet],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-
 export class App {
-  profileForm= new FormGroup({
-    name:new FormControl('anil'),
-    password:new FormControl('1234'),
-    email:new FormControl('Yash@gmail.com')
-  });
+  title = 'Code Step by Step';
+  name = 'Yash Khandelwal';
 
-  submitData(){
-    console.log(this.profileForm.value);
-  }
-  setValues(){
-    this.profileForm.setValue({
-      name:'peter',
-      password:"321@123",
-      email:"peter"
-    });
+  hello() {
+    let x = 20;
+    const y = 40;
+    var data = 30;
   }
 }
