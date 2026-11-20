@@ -1,22 +1,14 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  imports: [],
+  
   selector: 'app-profile',
-  styleUrl: './profile.css',
-  templateUrl: './profile.html',
+//   template: "<h1> Profile of FDE </h1>",
+//   styles:"h1{color:red}", 
+  styleUrl:'./profile.css',
+  templateUrl:'./profile.html'
 })
+
 export class Profile {
-  userName: string | null = '';
-
-  constructor(private route: ActivatedRoute) {}
-
-  ngOnInit() {
-    this.route.data.subscribe((params) => {
-      console.log(params);
-        
-      this.userName = params['name'];
-    });
-  }
+  
 }

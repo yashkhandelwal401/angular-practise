@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
+import { Login } from './login/login';
+import { Profile } from './profile/profile';
 
 @Component({
-  imports: [],
+  imports: [Login,Profile ],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 
 export class App {
-  name = "Yash Khandelwal";
-  data = 100;
-  data2 = 100;
-  user1 = 'Yash';
-  user2 = 'Yash';
+  
 }
