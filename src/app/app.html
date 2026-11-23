@@ -1,2 +1,11 @@
-<h1> Data types </h1>
-<button (click)= sum(1,2)> Sum </button>
+<h1>Counter App</h1>
+
+<div style="text-align: center;">
+  <h3 class="count">{{count}}</h3>
+
+  <div>
+    <button (click)="handleCounter('minus')" class="btn bg-red">Decrement</button>
+    <button (click)="handleCounter('reset')" class="btn bg-black">Reset</button>
+    <button (click)="handleCounter('plus')" class="btn bg-green">Increment</button>
+  </div>
+</div>
