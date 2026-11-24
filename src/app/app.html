@@ -1,6 +1,19 @@
-<h1>Get and Set Input Field Value</h1>
-<h2> {{username}} </h2>
-<input value = {{username}} (input) ="getUserName($event)" type="text" #userNameField placeholder="enter user name">
-<br><br>
-<button (click) = "setUserName()"> Set User name </button>
-<button (click) = getUserNameWithTemplate(userNameField.value)> Get User Name</button>
+<style>
+    h2{
+        color: orange;
+        background-color: black;
+    }
+</style>
+
+<hr>
+<app-user> </app-user>
+<hr> 
+
+<h1> Style options </h1>
+<app-profile> </app-profile>
+<h1> Heading 2 </h1>
+<h2> Heading Tag 2 </h2>
+<h2> Apple </h2>
+<h3 style = "background-color: gold;color: rgb(0, 0, 0); font-size: 500;"> 
+  This is heading 3 
+</h3>

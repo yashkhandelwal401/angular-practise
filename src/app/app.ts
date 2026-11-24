@@ -1,22 +1,14 @@
 import { Component } from '@angular/core';
+import { Profile } from './profile/profile';
+import { User } from './user/user';
 
 @Component({
-  imports: [],
+  imports: [Profile,User],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 
 export class App {
-   username="";
 
-  getUserName(event: Event) {
-    // this.username = (event.target as HTMLInputElement).value;    
-  }
-  setUserName(){
-    this.username = "Peter"
-  }
-  getUserNameWithTemplate(val : string){
-   this.username=val
-  }
 }

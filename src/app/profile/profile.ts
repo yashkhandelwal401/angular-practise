@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  
+  imports: [],
   selector: 'app-profile',
-//   template: "<h1> Profile of FDE </h1>",
-//   styles:"h1{color:red}", 
-  styleUrl:'./profile.css',
-  templateUrl:'./profile.html'
+  // styleUrl: './profile.css',
+  templateUrl: './profile.html',
+  styles:["h1 {background-color:green} button{font-size:50px} "]
 })
-
 export class Profile {
   
 }
